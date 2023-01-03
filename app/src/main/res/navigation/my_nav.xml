@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.demoapp.Fragment.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_myTransactionFragment"
+            app:destination="@id/myTransactionFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_addExpenceFragment"
+            app:destination="@id/addExpenceFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_editIncomeFragment"
+            app:destination="@id/editIncomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTransactionFragment"
+        android:name="com.example.demoapp.Fragment.MyTransactionFragment"
+        android:label="fragment_my_transaction"
+        tools:layout="@layout/fragment_my_transaction" >
+        <action
+            android:id="@+id/action_myTransactionFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExpenceFragment"
+        android:name="com.example.demoapp.Fragment.AddExpenseFragment"
+        android:label="fragment_add_expence"
+        tools:layout="@layout/fragment_add_expence" >
+        <action
+            android:id="@+id/action_addExpenceFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editIncomeFragment"
+        android:name="com.example.demoapp.Fragment.EditIncomeFragment"
+        android:label="fragment_edit_income"
+        tools:layout="@layout/fragment_edit_income" >
+        <action
+            android:id="@+id/action_editIncomeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+</navigation>
